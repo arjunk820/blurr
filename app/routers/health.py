@@ -9,4 +9,4 @@ async def health():
 
 @router.get("/version", response_class=JSONResponse)
 async def version():
-        return {"version": "1.0.0"}
+        return {"version":"0.1.0","python":"3.11"}

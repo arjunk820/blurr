@@ -13,4 +13,4 @@ async def version():
 
 @health_router.get("/upload/health")
 async def upload_health():
-    return {"status": "ok", "message": "Upload service is healthy"}
+    return {"status": "OK", "message": "Upload service is healthy"}

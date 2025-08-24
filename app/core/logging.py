@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 
-class Request (logging.Formatter):
+class RequestFormatter(logging.Formatter):
         def format(self, record):
                 timestamp = datetime.fromtimestamp(record.created).strftime('%Y-%m-%d %H:%M:%S')
                 level = record.levelname
@@ -15,7 +15,7 @@ class Request (logging.Formatter):
 
 logger = logging.getLogger("app_logger")
 handler = logging.StreamHandler()
-handler.setFormatter(Request())
+handler.setFormatter(RequestFormatter())
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
